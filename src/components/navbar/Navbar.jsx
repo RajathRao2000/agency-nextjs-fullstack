@@ -9,7 +9,7 @@ const Navbar = async () => {
   return (
     <div className={styles.container}>
       <Link href={"/"} className={styles.logo}>
-        <Image src="/logo.svg" height={30} width={30} />
+        <Image alt="logo" src="/logo.svg" height={30} width={30} />
       </Link>
       <div>
         <Links session={session} />

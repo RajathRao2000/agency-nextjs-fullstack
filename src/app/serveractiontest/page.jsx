@@ -1,4 +1,4 @@
-import { addPost, deletePost, sayHello } from "@/lib/actions";
+import { addPost, deletePost } from "@/lib/actions";
 
 const ServerActionTestPage = () => {
   return (
