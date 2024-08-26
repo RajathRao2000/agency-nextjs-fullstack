@@ -3,9 +3,15 @@ import styles from "./singlePost.module.css";
 import PostUser from "@/components/postUser/PostUser";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
+import { headers } from "next/headers";
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const headersList = headers();
+  const host = headersList.get("host");
+
+  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+  const baseUrl = `${protocol}://${host}/`;
+  const res = await fetch(`${baseUrl}/api/blog/${slug}`);
   if (!res.ok) {
     throw new Error("Something went wrong");
   }

@@ -50,12 +50,10 @@ export const {
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log(user, account, profile);
       if (account.provider === "github") {
         connectToDb();
         try {
           const user = await User.findOne({ email: profile.email });
-          console.log(user);
           if (!user) {
             const newUser = new User({
               username: profile.login,

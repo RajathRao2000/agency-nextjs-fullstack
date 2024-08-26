@@ -10,7 +10,6 @@ const NavigationTestPage = () => {
   const query = useSearchParams(); //gets query parameters eg: /navigationtest?q="test"
   console.log(query.get("q")); // set() can be use to set query
   const handleClick = () => {
-    console.log("clicked");
     router.push("/");
     // router.replace("/") //doesn't add new entry to history stack. Pressing back will not return to this page
     // router.refresh(); //refresh current page
