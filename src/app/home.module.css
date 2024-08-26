@@ -28,6 +28,12 @@
   color: var(--text);
 }
 
+.button:last-child {
+  background-color: #f0f0f0;
+  color: black;
+  text-align: center;
+}
+
 .button {
   padding: 20px;
   min-width: 120px;

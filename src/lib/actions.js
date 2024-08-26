@@ -40,14 +40,27 @@ export const deletePost = async (formData) => {
   }
 };
 export const addUser = async (prevState, formData) => {
-  const { username, password, email, img } = Object.fromEntries(formData);
+  const { username, password, email, img, isAdmin } =
+    Object.fromEntries(formData);
+  if (isAdmin == "isAdmin") {
+    return { error: "Set a valid Admin value" };
+  }
   try {
     connectToDb();
+    const user = await User.findOne({ username });
+    const _email = await User.findOne({ email });
+    if (user) {
+      return { error: "Username already exists" };
+    }
+    if (_email) {
+      return { error: "Email already exists" };
+    }
     const newUser = new User({
       username,
       email,
       password: await hashedPassword(password),
       img,
+      isAdmin,
     });
     await newUser.save();
     console.log("saved to db");
