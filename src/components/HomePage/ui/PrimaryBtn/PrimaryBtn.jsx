@@ -1,11 +1,26 @@
 import Arrow from "../Icons/Arrow";
 import styles from "./PrimaryBtn.module.css";
-const PrimaryBtn = ({ value, arrow }) => {
+import Link from "next/link";
+const PrimaryBtn = ({
+  value,
+  arrow,
+  as = "button",
+  link = "#",
+  styles: _styles = {},
+}) => {
   return (
-    <button className={`${styles.button}`}>
-      {value}
-      {arrow && <Arrow color={arrow} />}
-    </button>
+    <>
+      {as == "link" ? (
+        <Link style={_styles} className={`${styles.styling}`} href={link}>
+          {value}
+        </Link>
+      ) : (
+        <button style={_styles} className={`${styles.styling}`}>
+          {value}
+          {arrow && <Arrow color={arrow} />}
+        </button>
+      )}
+    </>
   );
 };
 

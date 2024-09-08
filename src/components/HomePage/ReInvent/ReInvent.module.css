@@ -42,16 +42,6 @@
   line-height: 24px;
 }
 
-@media (max-width: 1536px) {
-  .container {
-  }
-}
-
-@media (max-width: 1366px) {
-  .header {
-  }
-}
-
 @media (max-width: 1280px) {
   .container {
     padding: 80px;
@@ -72,19 +62,11 @@
   }
 }
 
-@media (max-width: 768px) {
-}
-
 @media (max-width: 640px) {
   .container {
     min-height: 100vh;
   }
   .info {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 474px) {
-  .container {
   }
 }

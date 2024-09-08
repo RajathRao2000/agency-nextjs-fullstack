@@ -5,13 +5,16 @@ import AdminPostForm from "@/components/adminPostForm/AdminPostForm";
 import AdminUsers from "@/components/adminUsers/AdminUsers";
 import AdminUserForm from "@/components/adminUserForm/AdminUserForm";
 import { auth } from "@/lib/auth";
+import Loading from "../loading";
+
 const AdminPage = async () => {
   const session = await auth();
   return (
     <div className={styles.container}>
       <div className={styles.row}>
         <div className={styles.col}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
+            {/* <Suspense fallback={<div>Loading...</div>}> */}
             <AdminPosts />
           </Suspense>
         </div>
@@ -21,7 +24,8 @@ const AdminPage = async () => {
       </div>
       <div className={styles.row}>
         <div className={styles.col}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
+            {/* <Suspense fallback={<div>Loading...</div>}> */}
             <AdminUsers />
           </Suspense>
         </div>

@@ -4,6 +4,7 @@ import PostUser from "@/components/postUser/PostUser";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 import { headers } from "next/headers";
+import Loading from "@/app/loading";
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
   const headersList = headers();
@@ -46,7 +47,8 @@ const SinglePostPage = async ({ params }) => {
         <h1 className={styles.title}>{post?.title}</h1>
         <div className={styles.detail}>
           {post && (
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
+              {/* <Suspense fallback={<div>Loading...</div>}> */}
               <PostUser userId={post?.userId} />
             </Suspense>
           )}

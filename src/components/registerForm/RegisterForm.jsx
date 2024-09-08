@@ -5,6 +5,7 @@ import { register } from "@/lib/actions";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import PrimaryBtn from "../HomePage/ui/PrimaryBtn/PrimaryBtn";
 const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
   const router = useRouter();
@@ -13,15 +14,15 @@ const RegisterForm = () => {
   }, [state?.success, router]);
   return (
     <form className={styles.form} action={formAction}>
-      <input type="text" placeholder="username" name="username" />
-      <input type="text" placeholder="email" name="email" />
-      <input type="password" placeholder="password" name="password" />
+      <input type="text" placeholder="Username" name="username" />
+      <input type="text" placeholder="Email" name="email" />
+      <input type="password" placeholder="Password" name="password" />
       <input
         type="password"
-        placeholder="password again"
+        placeholder="Re-enter password"
         name="passwordRepeat"
       />
-      <button>Register</button>
+      <PrimaryBtn styles={{ width: "auto" }} value={"Register"} />
       {state?.error}
       <Link href={"/login"}>
         Have an account? <b>Login</b>
