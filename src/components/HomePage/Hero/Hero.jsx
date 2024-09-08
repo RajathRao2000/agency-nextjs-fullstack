@@ -1,7 +1,7 @@
 import Image from "next/image";
 import PrimaryBtn from "../ui/PrimaryBtn/PrimaryBtn";
 import styles from "./hero.module.css";
-import heroImg from "./Heroimg.svg";
+import heroImg from "./HeroImg.svg";
 
 const Hero = () => {
   return (

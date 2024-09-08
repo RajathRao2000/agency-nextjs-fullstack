@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Footer.module.css";
-// import logo from "../../assets/logo-white.png";
 import logo from "../../../../public/logo-white.png";
 import Link from "next/link";
 import send from "./Icons/send.png";
