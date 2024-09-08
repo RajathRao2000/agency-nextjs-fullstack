@@ -1,0 +1,93 @@
+.container {
+  padding: 32px 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 78px;
+}
+
+.content {
+  max-width: 748px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customerInfo {
+  margin-bottom: 16px;
+}
+
+.company-logos p,
+.customerInfo .name {
+  color: var(--brand-primary);
+}
+
+.customerInfo .name {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.customerInfo .designation {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.company-logos {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.company-logos .text {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 1536px) {
+  .container {
+  }
+}
+
+@media (max-width: 1366px) {
+  .header {
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 100px;
+    min-height: 100vh;
+  }
+  .content {
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .img {
+    display: none;
+  }
+  .company-logos img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 80px 50px;
+  }
+}
+
+@media (max-width: 474px) {
+  .container {
+  }
+}

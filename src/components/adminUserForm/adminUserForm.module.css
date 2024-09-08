@@ -8,16 +8,16 @@
 .container textarea,
 .container select {
   padding: 20px;
-  background-color: var(--bgSoft);
+  /* background-color: var(--bgSoft); */
   border: none;
   border-radius: 5px;
-  color: var(--textColor);
+  /* color: var(--textColor); */
 }
 
 .container button {
   padding: 20px;
   cursor: pointer;
-  background-color: var(--btn);
+  background-color: var(--brand-primary);
   border: none;
   border-radius: 5px;
   color: var(--textColor);

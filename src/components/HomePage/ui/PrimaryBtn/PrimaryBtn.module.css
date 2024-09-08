@@ -1,0 +1,19 @@
+.button {
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 14px 32px;
+  background: var(--brand-primary);
+  color: var(--neutral-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

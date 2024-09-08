@@ -1,0 +1,153 @@
+.container {
+  padding: 48px 144px 144px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header p {
+  width: 70%;
+  max-width: 900px;
+  margin: 30px 0;
+}
+
+.content {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  place-content: center;
+  width: fit-content;
+}
+
+.blogCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogInfo {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%) translateX(-50%);
+  left: 50%;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--neutral-silver);
+  box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: center;
+  width: 317px;
+  height: 176px;
+}
+
+.blogInfo p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--neutral-grey);
+}
+
+.blogInfo a {
+  justify-self: flex-end;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+
+.blogInfo a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1536px) {
+  .container {
+  }
+}
+
+@media (max-width: 1366px) {
+  .header {
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 80px;
+    padding-bottom: 144px;
+  }
+
+  .blogCard img {
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .blogInfo {
+    width: 210px;
+    padding: 5px;
+  }
+  .blogInfo p,
+  .blogInfo a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+  }
+  .header p {
+    width: 90%;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    gap: 144px;
+  }
+
+  .blogCard img {
+    width: auto;
+  }
+  .blogInfo {
+    width: 317px;
+    padding: 16px;
+  }
+  .blogInfo p,
+  .blogInfo a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    /* background-color: green; */
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 474px) {
+  .container {
+  }
+}

@@ -10,7 +10,7 @@ const ContactPage = () => {
       <div className={styles.imgContainer}>
         <Image
           className={styles.img}
-          src={"/contact.png"}
+          src={"/contact.svg"}
           alt="contactimg"
           fill
         />

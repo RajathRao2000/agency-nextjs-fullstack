@@ -1,8 +1,9 @@
 .container {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 100px;
+  padding: 144px;
+  padding-top: 50px;
 }
 
 .row {

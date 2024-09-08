@@ -1,0 +1,138 @@
+.auth-btn-group {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.auth-btn-group .button {
+  border-radius: 6px;
+  width: 91px;
+  height: 40px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary {
+  background: var(--neutral-silver);
+  color: var(--brand-primary);
+}
+
+.register {
+}
+
+.navlinks_desktop {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.navlinks {
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.navlinks_mobile {
+  display: none;
+}
+
+.navlinks a,
+.auth-btn-group a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 1536px) {
+  .container {
+  }
+}
+
+@media (max-width: 1366px) {
+  .header {
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+  }
+}
+
+@media (max-width: 1024px) {
+  .navlinks {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .header {
+    background-color: green !important;
+  } */
+  .navlinks_desktop {
+    display: none;
+  }
+
+  .navlinks_mobile {
+    z-index: 99;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    max-width: 300px;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+  }
+  .navlinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .auth-btn-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .menuButton {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 999;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+  }
+}
+
+@media (max-width: 474px) {
+  .container {
+  }
+}

@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 100px;
+  padding: 144px;
 }
 
 .textContainer {
@@ -11,7 +12,7 @@
 }
 
 .subtitle {
-  color: var(--btn);
+  color: var(--brand-primary);
 }
 
 .title {
@@ -36,7 +37,7 @@
 }
 
 .box h1 {
-  color: var(--btn);
+  color: var(--brand-primary);
 }
 
 .img {
@@ -56,5 +57,45 @@
   .boxes {
     flex-direction: column;
     gap: 50px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .container {
+  }
+}
+
+@media (max-width: 1366px) {
+  .header {
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 100px;
+    /* height: 9v */
+  }
+  .imgContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 474px) {
+  .container {
   }
 }

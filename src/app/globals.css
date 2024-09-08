@@ -1,9 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --bg: #0d0c22;
   --bgSoft: #2d3b42;
   --text: white;
   --textSoft: #e5e5e5;
   --btn: #3673fd;
+
+  --neutral-white: #fff;
+  --neutral-silver: #f5f7fa;
+  --neutral-grey-blue: #abbed1;
+  --neutral-l-grey: #89939e;
+  --neutral-grey: #717171;
+  --neutral-d-grey: #4d4d4d;
+  --neutral-black: #263238;
+  --neutral-white-stroke: #abbed1;
+  --brand-info: #2194f3;
+  --brand-secondary: #263238;
+  --brand-primary: #4caf4f;
+  --shade-s1: #43a046;
+  --shade-s2: #388e3b;
+  --shade-s3: #237d31;
+  --shade-s4: #1b5e1f;
+  --shade-s5: #103e13;
+  --tint-t1: #66bb69;
+  --tint-t2: #81c784;
+  --tint-t3: #a5d6a7;
+  --tint-t4: #c8e6c9;
+  --tint-t5: #e8f5e9;
+  --action-success: #2e7d31;
+  --action-error: #e53835;
+  --action-warning: #fbc02d;
+  background: var(--neutral-silver);
+  color: var(--neutral-d-grey);
+  min-height: 100vh;
+
+  --font-family: "Inter", sans-serif;
+  --second-family: "Montserrat", sans-serif;
+  font-family: var(--font-family);
 }
 
 * {
@@ -13,13 +47,13 @@
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  /* background-color: var(--bg);
+  color: var(--text); */
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  /* text-decoration: none;
+  color: inherit; */
 }
 
 textarea {
@@ -27,17 +61,21 @@ textarea {
 }
 
 .container {
-  width: 1535px;
+  /* width: 1535px;
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; */
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 }
 
-@media (max-width: 1536px) {
+/* @media (max-width: 1536px) {
   .container {
     width: 1366px;
   }
@@ -79,4 +117,4 @@ textarea {
   .container {
     width: 380px;
   }
-}
+} */
