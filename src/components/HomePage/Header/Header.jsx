@@ -1,4 +1,3 @@
-import Link from "next/link";
 import logo from "../../../../public/logo-black.png";
 import styles from "./header.module.css";
 import Image from "next/image";
