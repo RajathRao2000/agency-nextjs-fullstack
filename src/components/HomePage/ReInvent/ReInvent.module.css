@@ -4,9 +4,7 @@
   align-items: center;
   padding: 144px;
 }
-.text {
-  flex-basis: 50%;
-}
+
 .text h3 div {
   color: var(--brand-primary);
 }
@@ -15,7 +13,6 @@
 }
 
 .info {
-  flex-basis: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: start;
