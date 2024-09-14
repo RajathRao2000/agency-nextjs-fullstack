@@ -1,7 +1,8 @@
-f.container {
-  display: flex;
-  flex-wrap: wrap;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 144px;
 }
 
 .content {
@@ -14,12 +15,47 @@ f.container {
 }
 
 .post {
-  width: 30%;
+  width: 100%;
+}
+
+@media (max-width: 1536px) {
+  .container {
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+  }
 }
 
 @media (max-width: 1024px) {
-  .content {
+  .container {
+    padding: 80px;
     grid-template-columns: 1fr;
-    gap: 30px;
+    place-items: center;
+  }
+  .post {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 144px 20px;
+  }
+}
+
+@media (max-width: 474px) {
+  .container {
   }
 }

@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 import { headers } from "next/headers";
 import Loading from "@/app/loading";
-// FETCH DATA WITH AN API
+
 const getData = async (slug) => {
   const headersList = headers();
   const host = headersList.get("host");
@@ -31,11 +31,8 @@ export const generateMetadata = async ({ params }) => {
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
-  // FETCH DATA WITH AN API
   const post = await getData(slug);
 
-  // FETCH DATA WITHOUT AN API
-  // const post = await getPost(slug);
   return (
     <div className={styles.container}>
       {post.img && (
@@ -48,14 +45,13 @@ const SinglePostPage = async ({ params }) => {
         <div className={styles.detail}>
           {post && (
             <Suspense fallback={<Loading />}>
-              {/* <Suspense fallback={<div>Loading...</div>}> */}
               <PostUser userId={post?.userId} />
             </Suspense>
           )}
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailvalue}>
-              {post.createdAt.toString().slice(4, 16)}
+              {new Date(post.createdAt).toLocaleDateString()}
             </span>
           </div>
         </div>

@@ -15,7 +15,7 @@
     A responsive E-Commerce project built with Next.js (React + MongoDB).
     <br />
     <br />
-    <a href="https://e-commerce-new-black.vercel.app/">View Demo</a>
+    <a href="https://agency-nextjs-fullstack.vercel.app/">View Demo</a>
   </p>
 </div>
 

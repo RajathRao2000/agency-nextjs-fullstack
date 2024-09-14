@@ -5,21 +5,22 @@ import safeguarding from "./BlogImages/safeguarding.png";
 import safeguardingRes from "./BlogImages/safeguarding-res.png";
 import Arrow from "../ui/Icons/Arrow";
 import Image from "next/image";
+
 const BlogData = [
   {
     title: "Creating Streamlined Safeguarding Processes with OneRen",
-    slug: "safeguarding-processes",
+    slug: "creating-streamlined-safeguarding-processes-oneren",
     img: safeguarding,
   },
   {
     title: "Revamping the Membership Model with Triathlon Australia",
-    slug: "revamping-the-membership-model",
+    slug: "revamping-membership-model-triathlon-australia",
     img: memModel,
   },
   {
     title:
       "What are your safeguarding responsibilities and how can you manage them?",
-    slug: "safeguarding-responsibilities",
+    slug: "safeguarding-responsibilities-and-how-to-manage-them",
     img: safeguardingRes,
   },
 ];
@@ -30,7 +31,7 @@ const BlogCard = ({ title, slug, img }) => {
       <Image width={368} height={286} src={img} alt={title} />
       <div className={styles.blogInfo}>
         <p>{title}</p>
-        <Link href={slug}>
+        <Link href={`blog/${slug}`}>
           Read more <Arrow />
         </Link>
       </div>

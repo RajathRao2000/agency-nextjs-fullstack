@@ -1,7 +1,7 @@
 import PostCard from "@/components/postCard/PostCard";
 import styles from "./blog.module.css";
 import { headers } from "next/headers";
-// FETCH DATA WITH AN API
+
 const getData = async () => {
   const headersList = headers();
   const host = headersList.get("host");
@@ -17,11 +17,7 @@ const getData = async () => {
   return res.json();
 };
 const BlogPage = async () => {
-  // FETCH DATA WITH AN API
   const posts = await getData();
-
-  //FETCH DATA WITHOUT AN API
-  // const posts = await getPosts();
   return (
     <div className={styles.container}>
       {posts.map((post) => {

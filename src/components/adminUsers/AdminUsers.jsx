@@ -4,7 +4,6 @@ import { deleteUser } from "@/lib/actions";
 import Image from "next/image";
 const AdminUsers = async () => {
   const users = await getUsers();
-  // console.log(users);
   return (
     <div className={styles.container}>
       <h1>Users</h1>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { deletePost } from "@/lib/actions";
 const AdminPosts = async () => {
   const posts = await getPosts();
-  // console.log(posts);
   return (
     <div className={styles.container}>
       <h1>Posts</h1>

@@ -13,7 +13,7 @@ const Hero = () => {
         <p>
           Where to grow your business as a photographer: site or social media?
         </p>
-        <PrimaryBtn value="Register" />
+        <PrimaryBtn as="link" link={"/register"} value="Register" />
       </div>
       <div className={styles.image}>
         <Image src={heroImg} alt="hero" width={407} height={391} />

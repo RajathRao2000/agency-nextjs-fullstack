@@ -1,17 +1,7 @@
 import { Post } from "./models";
 import { connectToDb } from "./utils";
 import { User } from "./models";
-//TEMPORARY DATA
-// const users = [
-//   { id: 1, name: "John" },
-//   { id: 1, name: "Jane" },
-// ];
-// const posts = [
-//   { id: 1, title: "Post 1", body: "......", userId: 1 },
-//   { id: 1, title: "Post 2", body: "......", userId: 1 },
-//   { id: 1, title: "Post 3", body: "......", userId: 1 },
-//   { id: 1, title: "Post 4", body: "......", userId: 1 },
-// ];
+
 import { unstable_noStore as noStore } from "next/cache";
 
 export const getPosts = async () => {
